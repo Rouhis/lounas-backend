@@ -1,7 +1,7 @@
 # main.py
 
 from flask import Flask, jsonify
-from scrapers import ninanKeittio, dylan # Import other restaurant scrapers as needed
+from scrapers import ninanKeittio, dylan, factoryPasila # Import other restaurant scrapers as needed
 
 app = Flask(__name__)
 
@@ -12,6 +12,7 @@ def get_menus():
     # Get menus from all restaurant scrapers
     menus.append(ninanKeittio.get_menu())
     menus.append(dylan.get_menu())
+    menus.append(factoryPasila.get_menu())
     # Add calls to other restaurant scraper functions as needed
     
     return jsonify({'menus': menus})
