@@ -18,7 +18,6 @@ def get_menu():
     day_number = today.day  # Day of the month without leading zero
     month_number = today.month  # Month number without leading zero
     date_str = f"{day_abbr.capitalize()} {day_number}.{month_number}."
-    print(f"Today's date string: {date_str}")  # Debug print for today's date
 
     items = []
 
@@ -39,8 +38,7 @@ def get_menu():
     else:
         print(f"No heading found for date: {date_str}")
 
-    return {'restaurant': 'Restaurant 2', 'menu': items}
+    return {'menu': items}
 
 if __name__ == "__main__":
     menu = get_menu()
-    print(menu)

@@ -20,13 +20,11 @@ def get_menu():
     month_number = today.month  # Month number without leading zero
     year_number = today.year  # Year number
     date_str = f"{day_name.capitalize()} {day_number}.{month_number}.{year_number}"
-    print(f"Today's date string: {date_str}")  # Debug print for today's date
 
     items = []
 
     # Find the <h3> tag with today's date
     date_heading = soup.find('h3', text=date_str)
-    print(f"Header texts: {soup.find_all('h3')}")
     if date_heading:
         # Find the next <p> tag after the date heading
         menu_paragraph = date_heading.find_next('p')

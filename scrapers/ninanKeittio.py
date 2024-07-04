@@ -20,7 +20,6 @@ def get_menu():
 
     soup = BeautifulSoup(response.content, 'html.parser')
     divs = soup.find_all('div', class_=div_class)
-    print(divs)
     today = datetime.now()
     day = today.strftime('%A').capitalize()
     date_str = f"{day} {today.day}.{today.month}."
@@ -36,9 +35,7 @@ def get_menu():
             if strong_tag:
                 # Get the text content of the <strong> tag
                 day_str = strong_tag.get_text().strip()
-                print(f"Found date string in HTML: {day_str}")
                 if day_str == date_str:
-                    print(f"Match found for today: {day_str}")
                     # Find the next sibling <ul> element
                     ul = p.find_next_sibling('ul')
                     if ul:
