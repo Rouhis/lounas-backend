@@ -53,4 +53,4 @@ def get_menu():
                     print(f"No match for today's date. Found: {day_str}")
     
     
-    return {'restaurant': 'Ninan Keittiö', 'menu': items}
+    return {'menu': items}

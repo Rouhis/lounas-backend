@@ -26,4 +26,4 @@ def get_menu():
             for menu_item in menu_items:
                 items.append(menu_item.strip())
 
-    return {'restaurant': 'Dylan Böle', 'menu': items}
+    return {'menu': items}

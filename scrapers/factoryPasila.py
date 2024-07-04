@@ -39,4 +39,4 @@ def get_menu():
     else:
         print(f"No heading found for date: {date_str}")
 
-    return {'restaurant': 'Factory Pasila', 'menu': items}
+    return {'menu': items}
